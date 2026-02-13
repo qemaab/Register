@@ -105,76 +105,11 @@ form.addEventListener('submit', function(e) {
     
     console.log('Form submitted successfully! ✿', data);
     
-    // Show success message
-    showSuccessMessage();
+    // Here you can add your form submission logic
+    // Example: send data to server, redirect to another page, etc.
+    
+    alert('✿ Registration submitted!');
 });
-
-// Show success message
-function showSuccessMessage() {
-    // Create success overlay
-    const overlay = document.createElement('div');
-    overlay.style.cssText = `
-        position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
-        background: rgba(255, 182, 193, 0.95);
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        z-index: 9999;
-        animation: fadeIn 0.5s ease;
-    `;
-    
-    const message = document.createElement('div');
-    message.style.cssText = `
-        background: white;
-        padding: 50px;
-        border-radius: 30px;
-        text-align: center;
-        box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
-        animation: scaleIn 0.5s ease;
-    `;
-    
-    message.innerHTML = `
-        <div style="font-size: 60px; margin-bottom: 20px;">🎀</div>
-        <h2 style="font-family: 'Playfair Display', serif; color: #d17a9e; font-size: 32px; margin-bottom: 15px;">
-            Registration Successful!
-        </h2>
-        <p style="font-family: 'Cormorant Garamond', serif; color: #9b7b8c; font-size: 18px;">
-            Welcome to our lovely community ♡
-        </p>
-    `;
-    
-    overlay.appendChild(message);
-    document.body.appendChild(overlay);
-    
-    // Add animations
-    const style = document.createElement('style');
-    style.textContent = `
-        @keyframes fadeIn {
-            from { opacity: 0; }
-            to { opacity: 1; }
-        }
-        @keyframes scaleIn {
-            from { transform: scale(0.8); opacity: 0; }
-            to { transform: scale(1); opacity: 1; }
-        }
-    `;
-    document.head.appendChild(style);
-    
-    // Remove overlay after 3 seconds
-    setTimeout(() => {
-        overlay.style.animation = 'fadeIn 0.5s ease reverse';
-        setTimeout(() => {
-            overlay.remove();
-            form.reset();
-            passwordHint.textContent = '';
-            passwordMatch.textContent = '';
-        }, 500);
-    }, 3000);
-}
 
 // Add input validation styling
 const inputs = form.querySelectorAll('input[required], select[required], textarea[required]');
