@@ -66,7 +66,7 @@ function checkPasswordsMatch() {
     }
 }
 
-// Check password match on confirm password input
+// Check password if match on confirm password input
 confirmPassword.addEventListener('input', checkPasswordsMatch);
 
 // Form submission
@@ -105,9 +105,7 @@ form.addEventListener('submit', function(e) {
     
     console.log('Form submitted successfully! ✿', data);
     
-    // Here you can add your form submission logic
-    // Example: send data to server, redirect to another page, etc.
-    
+
     alert('✿ Registration submitted!');
 });
 
