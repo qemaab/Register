@@ -5,7 +5,7 @@
 }
 
 body {
-    font-family: 'Cormorant Garamond', serif;
+    font-family: Roboto,sans-serif;
     background: linear-gradient(135deg, #ffeef8 0%, #fff5f9 50%, #ffe8f0 100%);
     min-height: 100vh;
     display: flex;
@@ -15,8 +15,6 @@ body {
     position: relative;
     overflow-x: hidden;
 }
-
-
 
 @keyframes float {
     0%, 100% { transform: translateY(0px); }
@@ -59,7 +57,7 @@ body {
 }
 
 h1 {
-    font-family: 'Playfair Display', serif;
+    font-family: Georgia, 'Times New Roman', Times, serif;
     font-size: 42px;
     color: #d17a9e;
     font-weight: 600;
@@ -93,7 +91,7 @@ label {
     color: #b57b92;
     font-size: 14px;
     margin-bottom: 8px;
-    font-weight: 400;
+    font-weight: 500;
 }
 
 input[type="text"],
@@ -107,7 +105,7 @@ textarea {
     padding: 14px 18px;
     border: 2px solid #ffd1dc;
     border-radius: 15px;
-    font-family: 'Cormorant Garamond', serif;
+    font-family: Roboto, sans-serif;
     font-size: 16px;
     color: #8b6b7a;
     background: #fff9fb;
@@ -193,14 +191,14 @@ input[type="checkbox"]:checked::after {
     border: none;
     border-radius: 20px;
     color: white;
-    font-family: 'Playfair Display', serif;
-    font-size: 20px;
+    font-family: Roboto, sans-serif;
+    font-size: 18px;
     font-weight: 600;
     cursor: pointer;
     margin-top: 25px;
     box-shadow: 0 8px 25px rgba(255, 182, 193, 0.4);
     transition: all 0.3s ease;
-    letter-spacing: 1px;
+    letter-spacing: 0.5px;
 }
 
 .btn-register:hover {
@@ -267,7 +265,7 @@ small {
     color: #81c784;
 }
 
-/* Decorative elements */
+/* Decor elements */
 .bow-decoration {
     position: absolute;
     font-size: 24px;
